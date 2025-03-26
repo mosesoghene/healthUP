@@ -1,10 +1,11 @@
 package com.healthup.config;
 
+import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
 public class MongoDBConfig implements DatabaseConfig {
     private static final String CONNECTION_STRING = "mongodb://localhost:27017";
-    private static final String DATABASE_NAME = "health_management";
+    private static final String DATABASE_NAME = "healthup";
 
     @Override
     public Object getConnection() throws Exception {
@@ -13,6 +14,11 @@ public class MongoDBConfig implements DatabaseConfig {
 
     @Override
     public void closeConnection(Object connection) throws Exception {
+        if (connection instanceof MongoClient) ((MongoClient) connection).close();
+    }
 
+    @Override
+    public String getDatabaseName() {
+        return DATABASE_NAME;
     }
 }

@@ -1,18 +1,25 @@
 package com.healthup.data.models;
 
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
 public class Patient {
-    private Long id;
+    private String id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
-    public Long getId() {
-        return id;
+    public Patient(String id, String firstName, String lastName, String email, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -45,5 +52,13 @@ public class Patient {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Document toDocument() {
+        return new Document("_id", new ObjectId(id))
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("email", email)
+                .append("password", password);
     }
 }
