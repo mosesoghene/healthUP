@@ -55,7 +55,7 @@ public class Patient {
     }
 
     public Document toDocument() {
-        return new Document("_id", id)
+        return new Document("_id", new ObjectId(id))
                 .append("firstName", firstName)
                 .append("lastName", lastName)
                 .append("email", email)
