@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 229, 229);
+
+}
+
+.all{
+    /* background-color: rgb(233, 229, 229); */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .navBar{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    margin: 10px;
+} */
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: rgb(228, 223, 223); 
+    padding: 40px;
+    /* padding-top: 50px; */
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap:15px;
+}
+.input-text{
+    border-radius: 5px;
+    height: 20px;
+    padding: 8px;
+    border: white;;
+}
+.btn{
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: skyblue;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    border: white;
+}
+.create{
+    color: rgb(32, 161, 212);
+    padding: 8px;   
+    background-color: rgb(192, 228, 241);
+}
+.create a{
+    color: rgb(55, 154, 194);
+}

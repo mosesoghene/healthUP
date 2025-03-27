@@ -1,0 +1,30 @@
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    position: fixed;
+    top:0;
+    right: 0;
+    
+}
+.profile{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: rgb(228, 223, 223);
+    padding: 40px;
+    box-shadow:0 0 10px rgba(134, 54, 54, 0.3);
+}
+.list{
+    list-style: none;
+
+}
+/* list:hover{
+    cursor:text;
+} */
