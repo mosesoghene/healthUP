@@ -12,5 +12,6 @@ public interface PatientRepository<T> {
     List<Patient> findAll();
     void delete(long id);
     Patient update(Patient patient);
-    void setDatabaseConfig(T config);
+    void setDatabaseConfig(T config) throws Exception;
+    long count() throws Exception;
 }
